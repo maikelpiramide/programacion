@@ -1,7 +1,13 @@
 public class Zona {
-    private int estradasPorVender;
+    private int entradasPorVender;
+    private String nombreZona;
 
-    public Zona(int numeroEntradas){
-        this.estradasPorVender = numeroEntradas;
+    public Zona(String zona,int numeroEntradas){
+        this.entradasPorVender = numeroEntradas;
+        this.nombreZona = zona;
+    }
+
+    public void verEntradas(){
+        System.out.println("quedan " + this.entradasPorVender + " entradas de la " + this.nombreZona );
     }
 }
