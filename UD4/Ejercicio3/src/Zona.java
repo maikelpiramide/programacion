@@ -10,4 +10,8 @@ public class Zona {
     public void verEntradas(){
         System.out.println("quedan " + this.entradasPorVender + " entradas de la " + this.nombreZona );
     }
+
+    public void venderEntradas(int numeroVentas){
+        this.entradasPorVender -= numeroVentas;
+    }
 }
