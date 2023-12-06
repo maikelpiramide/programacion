@@ -12,6 +12,18 @@ public class Zona {
     }
 
     public void venderEntradas(int numeroVentas){
-        this.entradasPorVender -= numeroVentas;
+        if(this.entradasPorVender == 0){
+            System.out.println("no quedan entradas por vender");
+            System.out.println("-------------------------------");
+        } else if (this.entradasPorVender < numeroVentas) {
+            System.out.println("quedan solo " + this.entradasPorVender + " entradas");
+            System.out.println("-----------------------------------");
+        }
+        else{
+            System.out.println("Aquí tiene sus " + numeroVentas + " entradas");
+            System.out.println("----------------------------------------------");
+            this.entradasPorVender -= numeroVentas;
+        }
+
     }
 }
