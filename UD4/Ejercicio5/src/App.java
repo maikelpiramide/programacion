@@ -1,5 +1,6 @@
 public class App {
     public static void main(String[] args) {
+        CD cd1 = new CD();
         Cancion cancion1 = new Cancion();
         Cancion cancion2 = new Cancion("Through da storm","poloG");
 
@@ -15,5 +16,6 @@ public class App {
         cancion1.dameTitulo();
         cancion1.dameAutor();
 
+        cd1.numeroCanciones();
     }
 }
