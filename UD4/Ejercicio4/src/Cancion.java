@@ -14,10 +14,10 @@ public class Cancion {
     public void dameTitulo(){
         System.out.println("-----------");
         System.out.println(this.titulo);
-        System.out.println("-----------");
+
     }
     public void dameAutor(){
-        System.out.println("-----------");
+
         System.out.println(this.autor);
         System.out.println("-----------");
     }
