@@ -40,18 +40,23 @@ public class CD {
     public void elimina(int pos){
 
         this.canciones[pos-1] = null;
-        for(int i = 0; i < this.canciones.length; i++ ){
-            if(this.canciones[pos] != null){
-                this.canciones[pos-1] = this.canciones[pos];
+        for(int i = 0; i < this.canciones.length -1; i++ ){
+            if(this.canciones[i] == null) {
+                Cancion aux = this.canciones[i];
+                this.canciones[i] = this.canciones[i+1];
+                this.canciones[i+1] = aux;
             }
         }
-        for(Cancion i : this.canciones){
+        /*for(Cancion i : this.canciones){
             System.out.println(i);
-        }
+        }*/
     }
     public void verTodasCanciones(){
         for (Cancion i : this.canciones){
-            System.out.println(i);
+            if(i != null) {
+                System.out.println(i);
+                System.out.println();
+            }
         }
     }
 }
