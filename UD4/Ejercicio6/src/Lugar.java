@@ -5,4 +5,9 @@ public class Lugar {
         this.pais = pais;
         this.ciudad = ciudad;
     }
+
+    @Override
+    public String toString() {
+        return this.ciudad + ", " + this.pais;
+    }
 }

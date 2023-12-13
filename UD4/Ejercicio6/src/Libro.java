@@ -44,6 +44,9 @@ public class Libro {
         System.out.println("Editorial: " + this.editorial);
     }
 
+    public void getDatos(){
+        System.out.printf("titulo: %s\n%s \nAutor: %s \nISBN: %s \n%s, %s\n%d páginas",this.titulo,this.edicion, this.autor, this.isbn, this.lugar,this.fechaEdicion, this.paginas);
+    }
     @Override
     public String toString(){
         String texto = " Titulo: " + this.titulo + "\n Autor: " + this.autor + "\n ISBN: " + this.isbn;
