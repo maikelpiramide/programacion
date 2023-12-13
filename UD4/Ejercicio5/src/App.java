@@ -13,9 +13,17 @@ public class App {
         cancion1.ponAutor("Pop smoke");
         cancion1.ponTitulo("Dior");
 
-        cancion1.dameTitulo();
-        cancion1.dameAutor();
 
         cd1.numeroCanciones();
+        cd1.dameCancion(2);
+        cd1.agregaCancion(cancion2);
+        cd1.agregaCancion(cancion1);
+        cd1.agregaCancion(cancion2);
+        cd1.agregaCancion(cancion2);
+        cd1.agregaCancion(cancion2);
+        cd1.numeroCanciones();
+        cd1.dameCancion(1);
+        cd1.dameCancion(2);
+
     }
 }

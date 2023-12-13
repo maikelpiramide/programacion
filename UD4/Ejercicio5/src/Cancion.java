@@ -28,5 +28,9 @@ public class Cancion {
     public void ponAutor(String autor){
         this.autor = autor;
     }
-
+    @Override
+    public String toString(){
+        String text = " Nombre: " + this.titulo + " \n Autor: " + this.autor;
+        return text;
+    }
 }
