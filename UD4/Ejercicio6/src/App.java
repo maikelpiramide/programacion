@@ -9,8 +9,7 @@ public class App {
     static Biblioteca biblioteca = new Biblioteca();
     public static void main(String[] args) {
         //Libro libro1 = new Libro("El mono con botas",new Persona("Maikel"),"x-1231234-f",100,"3 edicion","la casa",new Lugar("Huesca","huescounsing"),new Fecha("martes 16 de enero de 1993"));
-        //libro1.getDatos();
-
+        //libro1.getDatos();\
         menu();
     }
     public static void menu(){
