@@ -9,6 +9,7 @@ public class App {
     static Biblioteca biblioteca = new Biblioteca();
     public static void main(String[] args) {
         //Libro libro1 = new Libro("El mono con botas",new Persona("Maikel"),"x-1231234-f",100,"3 edicion","la casa",new Lugar("Huesca","huescounsing"),new Fecha("martes 16 de enero de 1993"));
+<<<<<<< HEAD
         //libro1.getDatos();
 
 <<<<<<< HEAD
@@ -39,6 +40,33 @@ public class App {
         }while(aux);
     }
 
+=======
+        //libro1.getDatos();\
+        menu();
+    }
+    public static void menu(){
+        int res;
+        boolean aux = true;
+        do {
+            System.out.println("1 - Introducir nuevo libro");
+            System.out.println("2 - ver informacion de libro");
+            System.out.println("3 - salir");
+            res = scn.nextInt();
+            if (res == 1) {
+                introducirLibro();
+            } else if (res == 2) {
+                int pos;
+                System.out.println("posicion del libro");
+                pos = scn.nextInt();
+                //String limpiaScanner = scn.nextLine();
+                verInfoLibro(pos);
+            } else {
+                aux = false;
+            }
+        }while(aux);
+    }
+
+>>>>>>> 3003bcc9b2939d3504c048976f052adad26bd7af
     public static void introducirLibro(){
         String titulo;
         Persona autor;
@@ -77,7 +105,10 @@ public class App {
         Libro librover = biblioteca.getLibro(pos);
         librover.getDatos();
         System.out.println();
+<<<<<<< HEAD
 >>>>>>> e336e49294e467bd1382af3ec26b33a340b80159
+=======
+>>>>>>> 3003bcc9b2939d3504c048976f052adad26bd7af
     }
 
 }
