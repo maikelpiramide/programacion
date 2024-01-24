@@ -12,4 +12,18 @@ public class Libro {
     public String getTitulo(){
         return this.titulo;
     }
+
+    public String getAutor(){
+        return this.autor;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", numeroPaginas=" + numeroPaginas +
+                '}';
+    }
 }
