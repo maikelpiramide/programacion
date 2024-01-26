@@ -1,7 +1,7 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
-
-public class Biblioteca extends CompareTitle {
+public class Biblioteca {
     private String nombre;
     private String ciudad;
 
@@ -14,6 +14,12 @@ public class Biblioteca extends CompareTitle {
     }
 
     public void addLirbo(Libro li){
-        this.libros.add(li);
+        this.libros.add(li);f
+        Comparator comparador = new CompareTitle();
+        if(this.libros.get(1) != null){
+            for(int i = 0 ; i < this.libros.size(); i++){
+                this.libros.sort(comparador.compare(this.libros.get(i),this.libros.get(i+1)));
+            }
+        }
     }
 }

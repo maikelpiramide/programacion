@@ -6,4 +6,5 @@ public class CompareTitle implements Comparator<Libro> {
     public int compare(Libro li1, Libro li2) {
         return li1.getTitulo().compareTo(li2.getTitulo());
     }
+
 }
