@@ -21,9 +21,10 @@ public class Libro implements Comparable<Libro>{
     @Override
     public int compareTo(Libro li){
         int compareTitle = this.titulo.compareToIgnoreCase(li.titulo);
-        if(compareTitle == 0){
+        int compareAutor = this.autor.compareToIgnoreCase(li.autor);
+        if(compareTitle == 0)
             return this.autor.compareToIgnoreCase(li.autor);
-        }
+
         return compareTitle;
     }
 
@@ -35,11 +36,10 @@ public class Libro implements Comparable<Libro>{
     //le pasamos el objeto
     @Override
     public boolean equals(Object o) {
-        /*if(!(o instanceof Libro))
+        if(!(o instanceof Libro))
             return false;
         Libro libro = (Libro) o;
-        return this.titulo.equalsIgnoreCase(libro.titulo) && this.autor.equalsIgnoreCase(libro.autor);*/
-        return false;
+        return this.titulo.equalsIgnoreCase(libro.titulo) && this.autor.equalsIgnoreCase(libro.autor);
     }
     @Override
     public String toString() {
