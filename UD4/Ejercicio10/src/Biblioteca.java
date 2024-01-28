@@ -26,4 +26,15 @@ public class Biblioteca {
         return this.libros.size();
     }
 
+    public void eliminarLibro(int pos){
+        int aux = 0;
+        for (Libro li : this.libros) {
+            aux++;
+            if(aux == pos){
+                this.libros.remove(li);
+                break;
+            }
+        }
+    }
+
 }
