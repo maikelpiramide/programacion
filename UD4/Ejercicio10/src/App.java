@@ -21,10 +21,18 @@ public class App {
         biblioteca01.verLibros();
 
         biblioteca01.eliminarLibro(2);
+        System.out.println();
         System.out.println("despus de eliminar");
         System.out.println();
         biblioteca01.verLibros();
 
+        System.out.println();
+        System.out.println("ver libro position");
+        biblioteca01.getLibro(1);
+
+        System.out.println();
+        System.out.println("buscar por titulo");
+        biblioteca01.buscarLibro("maik");
 
 
     }

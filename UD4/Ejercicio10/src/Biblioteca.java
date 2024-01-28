@@ -1,4 +1,5 @@
 
+import java.util.Locale;
 import java.util.TreeSet;
 
 public class Biblioteca {
@@ -35,6 +36,31 @@ public class Biblioteca {
                 break;
             }
         }
+    }
+
+    public void getLibro(int pos){
+        int aux = 0;
+        for (Libro li : this.libros) {
+            aux++;
+            if(aux == pos){
+                System.out.println(li);
+                break;
+            }
+        }
+    }
+
+    public int buscarLibro(String title){
+        String titulo = title.toLowerCase();
+        int cont = 0;
+        for (Libro li: this.libros){
+            cont ++;
+            if(li.getTitulo().toLowerCase().contains(titulo)){
+                System.out.println(li);
+                System.out.print("posicion del libro = " + cont + "\n");
+                //return cont;
+            }
+        }
+        return -1;
     }
 
 }
