@@ -1,8 +1,8 @@
 public class Alumno {
-    Centro centro;
-    String dni;
-    String nombre;
-    String apellido;
+    private Centro centro;
+    private String dni;
+    private String nombre;
+    private String apellido;
 
     public Alumno(Centro centro,String dni,String nombre,String apellido){
         this.centro = centro;
@@ -10,7 +10,9 @@ public class Alumno {
         this.nombre = nombre;
         this.apellido = apellido;
     }
-
+    public String getNombre(){
+        return this.nombre;
+    }
     @Override
     public int hashCode() {
         return this.dni.hashCode();

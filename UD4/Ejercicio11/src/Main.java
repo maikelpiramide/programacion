@@ -12,16 +12,28 @@
 
 public class Main {
     public static void main(String[] args) {
+        Competicion competi = new Competicion("competiPrueba");
         Centro centro01 = new Centro("IES Piramide");
-        Alumno alu01 = new Alumno(centro01,"123456789D","pedro","pica piedra");
-        Alumno alu02 = new Alumno(centro01,"123456789D","albaro","pica piedra");
-        Alumno alu03 = new Alumno(centro01,"987654321Q","pedro","pica piedra");
-        Equipo equipo01 = new Equipo("prueba","elu@alu.com");
-        equipo01.addAlumno(alu01);
-        equipo01.addAlumno(alu02);
-        equipo01.addAlumno(alu03);
+        Alumno alu01 = new Alumno(centro01,"123456789D","pedro","pedro");
+        Alumno alu02 = new Alumno(centro01,"123556789D","albaro","albaro");
+        Alumno alu03 = new Alumno(centro01,"987654321Q","pepa","pepa");
+        Equipo equipo01 = new Equipo("equipo01","elu@alu.com");
+        Equipo equipo02 = new Equipo("equipo02","asdf@asdf.com");
+        Equipo equipo03 = new Equipo("equipo03","asdf@asdf.com");
 
-        equipo01.verEquipo();
+        System.out.println();
+        System.out.println("equipos de la competi");
+
+        competi.addParticipante(alu01,equipo01);
+        competi.addParticipante(alu02,equipo01);
+        competi.addParticipante(alu03,equipo03);
+
+        competi.verSize();
+
+        competi.verParticipante(alu01);
+        System.out.println();
+        System.out.println("pruebas");
+        competi.pruebas();
 
     }
 }
