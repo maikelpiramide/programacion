@@ -13,7 +13,7 @@ public class App {
         //tenemos que meter en un ty el filereader porque lanza una excepción
         try{
             //creamos el lector del fichero
-            InputStreamReader fr = new FileReader("C:/Users/srill/Documents/Clase/ProgramacionGitHub/programacion/UD6/Stream/src/Explicaciones/Ejermplos/FicheroPrueba.txt");
+            InputStreamReader fr = new FileReader("src/Explicaciones/Ejermplos/FicheroPrueba.txt");
             int c = fr.read();
                 while(c != -1){
                     c=fr.read();
