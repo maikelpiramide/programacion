@@ -1,0 +1,7 @@
+pasar a mayusculas
+el
+texto
+con
+saltos
+de
+linea
