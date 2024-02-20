@@ -20,7 +20,7 @@ public class App {
         File file = new File(fichero);
         File fileUpper = new File("src/Ejercicio6/"+ficheroUpper);
 
-            //si se crea el fichero, integramos la lectura de uno y escritura en el creado
+        //si se crea el fichero, integramos la lectura de uno y escritura en el creado
         try{
             fileUpper.createNewFile();
             try(BufferedWriter bfw = new BufferedWriter(new FileWriter(fileUpper)) ; BufferedReader bfr = new BufferedReader(new FileReader(file))){
