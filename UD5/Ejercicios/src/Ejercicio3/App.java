@@ -1,8 +1,10 @@
 package Ejercicio3;
 
+import Ejercicio3.Ejercicio5.DiscoPrestable;
+
 public class App {
     public static void main(String[] args) {
-        ListaMultimedia lista = new ListaMultimedia();
+        /*ListaMultimedia lista = new ListaMultimedia();
         Disco disco01 = new Disco("disco01","maikel","mp3",3.24,"trap");
         Disco disco02 = new Disco("disco02","pepe","mp3",2.50,"Rock");
         Disco disco03 = new Disco("disco03","manolo","mp3",4.32,"rock");
@@ -37,6 +39,23 @@ public class App {
         System.out.println(lista.getDiscosRock());
         System.out.println();
         System.out.println("peliculas sin actriz");
-        System.out.println(lista.getPelisSinActriz());
+        System.out.println(lista.getPelisSinActriz());*/
+
+        DiscoPrestable disco1 = new DiscoPrestable("disco1","autor1","mp3",3.45,"disco1");
+        DiscoPrestable disco2 = new DiscoPrestable("disco1","autor1","mp3",3.45,"disco1");
+        DiscoPrestable disco3 = new DiscoPrestable("disco1","autor1","mp3",3.45,"disco1");
+        DiscoPrestable disco4 = new DiscoPrestable("disco1","autor1","mp3",3.45,"disco1");
+        DiscoPrestable disco5 = new DiscoPrestable("disco1","autor1","mp3",3.45,"disco1");
+        DiscoPrestable disco6 = new DiscoPrestable("disco1","autor1","mp3",3.45,"disco1");
+        DiscoPrestable[] discosPrestables = new DiscoPrestable[3];
+        discosPrestables[0] = disco1;
+        discosPrestables[1] = disco2;
+        discosPrestables[2] = disco3;
+
+        discosPrestables[1].prestar();
+        discosPrestables[2].prestar();
+        System.out.println(DiscoPrestable.cuentaPrestados());
+
+
     }
 }
