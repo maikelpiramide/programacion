@@ -1,4 +1,12 @@
 package Ejercicio1;
 
-public class Escuchador {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Escuchador implements ActionListener {
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
 }

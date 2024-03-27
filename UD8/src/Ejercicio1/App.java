@@ -7,16 +7,24 @@ public class App {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Cálculo de triángulo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(null);
-        frame.setSize(300,300);
+        frame.setLa
+        frame.setSize(300,100);
+        frame.setResizable(false);
 
-        JLabel nivel = new JLabel("Pruebas de texto");
-
-
+        JLabel nivel = new JLabel("base");
+        JTextField base = new JTextField(20);
+        JLabel nivAltura = new JLabel("Altura");
+        JTextField altura = new JTextField(20);
         JButton boton = new JButton("pruebas");
-        boton.setBounds(10,10,100,20);
-        frame.add(nivel);
-        frame.add(boton);
+
+        JPanel panel = new JPanel();
+        panel.add(nivel);
+        panel.add(base);
+        panel.add(nivAltura);
+        panel.add(altura);
+        panel.add(boton);
+        frame.add(panel);
         frame.setVisible(true);
+        boton.addActionListener(new Escuchador());
     }
 }
