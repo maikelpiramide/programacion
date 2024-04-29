@@ -4,7 +4,6 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.example.ejercicio2.Classes.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -35,7 +34,8 @@ public class UserCustomRepositoryImplements implements UserCustomRepository{
     @Override
     public Optional<User> getById(int id) {
 
-        return Optional.ofNullable((User) entityManager.createQuery("select e from User e where e.id = " + id));
+        return Optional.ofNullable((User) entityManager.createQuery("select e from User e where e.id = " + id).getSingleResult());
+
     }
 
     @Override
