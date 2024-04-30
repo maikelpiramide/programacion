@@ -7,7 +7,6 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -64,6 +63,30 @@ public class User {
 
     public LocalDate getFechaNaciento() {
         return fechaNaciento;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPrimerApellido(String primerApellido) {
+        this.primerApellido = primerApellido;
+    }
+
+    public void setSegudoApellido(String segudoApellido) {
+        this.segudoApellido = segudoApellido;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setFechaNaciento(LocalDate fechaNaciento) {
+        this.fechaNaciento = fechaNaciento;
     }
 
     @Override

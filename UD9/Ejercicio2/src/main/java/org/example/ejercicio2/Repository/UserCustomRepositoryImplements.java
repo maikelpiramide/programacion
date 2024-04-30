@@ -27,14 +27,18 @@ public class UserCustomRepositoryImplements implements UserCustomRepository{
     }
 
     @Override
+    @Transactional
     public List<User> findAll() {
-        return null;
+        return entityManager.createQuery("select u from User u")
+                .getResultList();
     }
 
     @Override
     public Optional<User> getById(int id) {
-
-        return Optional.ofNullable((User) entityManager.createQuery("select e from User e where e.id = " + id).getSingleResult());
+        User usuario = (User) entityManager.createQuery("select e from User e where e.id = :id")
+                .setParameter("id",id)
+                .getResultList();
+        return Optional.ofNullable(usuario);
 
     }
 
