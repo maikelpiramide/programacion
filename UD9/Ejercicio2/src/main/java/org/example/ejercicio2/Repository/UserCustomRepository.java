@@ -12,5 +12,6 @@ public interface UserCustomRepository {
     List<User> findAll();
     Optional<User> getById(int id);
     void deleteBySurname(String apellido);
+    List<User> getByFirstLeterName(String letra);
 
 }
